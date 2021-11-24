@@ -1,0 +1,1 @@
+Some models where run twice because of stuck MCMCs on st parameter, the stucked chains are place in 'rejected' and the 2nd run is denoted with a _2 after the number of the chain

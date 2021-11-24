@@ -1,0 +1,3 @@
+conda activate hddm
+ipython profile create --parallel --profile=RTDDM_MS
+ipcluster start --profile=RTDDM_MS --n 64
