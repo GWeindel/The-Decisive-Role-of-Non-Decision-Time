@@ -1,6 +1,6 @@
-Diagnostic_plots/ contains MCMC diagnostic plots for the fitted models
-QPplot/ contains the QPplot generated with ../2a and ../2b
-Fits/ and traces/ should contain the fits but was removed due to heavy files, the *stats.csv and *traces.csv owever contains most info necessary of the fits and MCMC traces
+-Diagnostic_plots/ contains MCMC diagnostic plots for the fitted models
+-QPplot/ contains the QPplot generated with ../2a and ../2b
+-Fits/ and traces/ should contain the fits but was removed due to heavy files, the *stats.csv and *traces.csv owever contains most info necessary of the fits and MCMC traces
 
 About the files : 
 - BPIC*.txt contains BPIC for RT or PMT DDMs
