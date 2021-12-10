@@ -4,9 +4,10 @@ This is the github repo for the [preprint](https://psyarxiv.com/gewb3/) "The Dec
 It contains all the code used to fit the model used (whether mixed models or drift diffusion model), and all the way the figures and tables were generated
 
 # Structure of the repo
-This folder contains all the files for the analysis in the paper.
+This folder contains all the files for the analysis and figures in the paper.
 
-DDM/ contains all the files needed to fit the DDM to RT and PMT
+DDM/ contains all the files for the estimation of the DDM to RT and PMT
+
 MixedModels/ contains all the files needed to fit the LME to RT, PMT and MT
 
 About the files : 
@@ -21,14 +22,19 @@ About the files :
 In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper. To that end, after installing anaconda : 
  1. run the following command in a terminal : $ conda create --name pystan --file spec-file_pystan.txt
  2. activate the environment through : $ conda activate pystan
- 3. launch Jupyter lab (recommended)
+ 3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb or .py in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
 Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this be previously creating a new anaconda environment from the "spec-file_hddm.txt"
  1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
  2. activate the environment through : $ conda activate hddm
- 3. launch Jupyter lab (recommended)
+ 3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb or .py in the DDM/ folder
+
+## Note on computation time
+On a single CPU with (current) average speed, a single MCMC for the linear miwed model takes approximatively 4 hours. The MCMC from the hddm package are however notoriously slow and the regression model can take up to one month given the high number of samples. One way to fasten this estimation is to reduce the number of burn-in samples, the inferences should be the same albeit noisier. 
+
+The computation time of all other files are not noteworthy.
 
 # Updates planned :
 - add the data 
