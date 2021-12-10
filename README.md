@@ -19,4 +19,4 @@ About the files :
 
 # Updates planned :
 - add the data 
-- add the conda env used for DDM and mixed models
+- add the conda env used for DDM and mixed models to ease reproducibility
