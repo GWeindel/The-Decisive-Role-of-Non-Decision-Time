@@ -17,6 +17,18 @@ About the files :
 - HDDM_ModelSelection_pmt.py and HDDM_ModelSelection_rt.py fit all the DDM models used in the model selection procedure from the dataset dataHDDM_pmt.csv or dataHDDM_rt.csv  in the DDM folder. 
 - HDDMreg_PMT.py contains the code to fit the regression version of the model selected during the model selection step
 
+# Instructions for reproducing the analyses
+In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper. To that end, after installing anaconda : 
+ 1. run the following command in a terminal : $ conda create --name pystan --file spec-file_pystan.txt
+ 2. activate the environment through : $ conda activate pystan
+ 3. launch Jupyter lab (recommended)
+ 4. launch any .ipynb or .py in the main or the MixedModels folder except the files starting with HDDM*, see below.
+
+Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this be previously creating a new anaconda environment from the "spec-file_hddm.txt"
+ 1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
+ 2. activate the environment through : $ conda activate hddm
+ 3. launch Jupyter lab (recommended)
+ 4. launch any .ipynb or .py in the DDM/ folder
+
 # Updates planned :
 - add the data 
-- add the conda env used for DDM and mixed models to ease reproducibility
