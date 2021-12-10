@@ -24,7 +24,7 @@ In order to use the main notebooks you can install anaconda https://docs.anacond
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb or .py in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
-Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this be previously creating a new anaconda environment from the "spec-file_hddm.txt"
+Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt"
  1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
  2. activate the environment through : $ conda activate hddm
  3. launch Jupyter lab (recommended) : $ jupyter lab
