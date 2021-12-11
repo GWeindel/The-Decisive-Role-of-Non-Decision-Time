@@ -1,7 +1,7 @@
 # Summary
 This is the github repo for the [preprint](https://psyarxiv.com/gewb3/) "The Decisive Role of Non-Decision Time for Interpreting Decision Making Models" hosted on [OSF](https://osf.io/t2ar3/) 
 
-It contains all the code used to fit the models (whether mixed models or drift diffusion models) draw the figures and generate the tables of the paper.
+It contains all the code used to fit the models (mixed or drift diffusion models) draw the figures and generate the tables of the paper.
 
 # Structure of the repo
 
@@ -22,7 +22,7 @@ In order to use the main notebooks you can install anaconda https://docs.anacond
  1. run the following command in a terminal : $ conda create --name pystan --file spec-file_pystan.txt
  2. activate the environment through : $ conda activate pystan
  3. launch Jupyter lab (recommended) : $ jupyter lab
- 4. launch any .ipynb or .py in the main or the MixedModels folder except the files starting with HDDM*, see below.
+ 4. launch any .ipynb in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
 Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt"
  1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
@@ -33,7 +33,7 @@ Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To eas
 Finally, the 
 
 ## Note on computation time
-On a single CPU with (current) average speed, a single MCMC for the linear miwed model takes approximatively 4 hours. The MCMC from the hddm package are however notoriously slow and the regression model can take up to one month given the high number of samples. One way to fasten this estimation is to reduce the number of burn-in samples, the inferences should be the same albeit noisier. 
+On a single CPU with (current) average speed, a single MCMC for the linear mixed model takes approximatively 4 hours. The MCMC from the hddm package are however notoriously slow and the regression model can take up to one month given the high number of burn-in samples. One way to fasten this estimation is to reduce the number of burn-in samples, from our experience the inferences should be the same albeit noisier. 
 
 The computation time of all other files are not noteworthy.
 
