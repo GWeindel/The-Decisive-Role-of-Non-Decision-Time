@@ -18,13 +18,13 @@ About the files :
 - HDDMreg_PMT.py contains the code to fit the regression version of the model selected during the model selection step
 
 # Instructions for reproducing the analyses
-In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper. To that end, after installing anaconda : 
+In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and install the packages listed in spec-file_pystan.txt. If you are on a linux 64 machine simply use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper : 
  1. run the following command in a terminal : $ conda create --name pystan --file spec-file_pystan.txt
  2. activate the environment through : $ conda activate pystan
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
-Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt"
+Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt", either manually or automatically on linux 64 :
  1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
  2. activate the environment through : $ conda activate hddm
  3. launch Jupyter lab (recommended) : $ jupyter lab
