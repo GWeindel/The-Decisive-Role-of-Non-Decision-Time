@@ -19,13 +19,17 @@ About the files :
 
 # Instructions for reproducing the analyses
 In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and install the packages listed in spec-file_pystan.txt. If you are on a linux 64 machine simply use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper : 
- 1. run the following command in a terminal : $ conda create --name pystan --file spec-file_pystan.txt
+ 1.Installing conda env (assuming anaconda is installed) :
+     - for a linux 64 machine run the following command in a terminal to exactly match the package installation used for the analysis : $ conda create --name pystan --file spec-file_pystan.txt or do a fresh install as for windows
+     - If you're a windows/mac user, if a URL is broken or if you want a lighter version of the environment, type : $ conda create env -n pystan python=3.8.5 pystan=2.19.1.1 arviz-0.10.0 jupyterlab=2.2.8
  2. activate the environment through : $ conda activate pystan
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
 Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt", either manually or automatically on linux 64 :
- 1. run the following command in a terminal : $ conda create --name hddm --file spec-file_hddm.txt
+ 1.Installing conda env (assuming anaconda is installed) :
+     - $ conda create --name hddm --file spec-file_hddm.txt
+     - for windows/mac users or if you want a lighter version of the environment : $ conda create env -n hddm python=2.7.15 hddm=0.6.0 jupyterlab=0.33.12
  2. activate the environment through : $ conda activate hddm
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb or .py in the DDM/ folder
