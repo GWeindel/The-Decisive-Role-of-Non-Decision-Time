@@ -39,7 +39,3 @@ Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To eas
 On a single CPU with (current) average speed, a single MCMC for the linear mixed model takes approximatively 4 hours. The MCMC from the hddm package are however notoriously slow and the regression model can take up to one month given the high number of burn-in samples. One way to fasten this estimation is to reduce the number of burn-in samples, from our experience the inferences should be the same albeit noisier. 
 
 The computation time of all other files are not noteworthy.
-
-# Updates planned :
-- add the data 
-- add the experiment creation code
