@@ -20,8 +20,8 @@ About the files :
 # Instructions for reproducing the analyses
 In order to use the main notebooks you can install anaconda https://docs.anaconda.com/anaconda/install/index.html and install the packages listed in spec-file_pystan.txt. If you are on a linux 64 machine simply use the specification file "spec-file_pystan.txt" to exactly match the installation used for the results of the paper : 
  1.Installing conda env (assuming anaconda is installed) :
-     - for a linux 64 machine run the following command in a terminal to exactly match the package installation used for the analysis : $ conda create --name pystan --file spec-file_pystan.txt or do a fresh install as for windows
-     - If you're a windows/mac user, if a URL is broken or if you want a lighter version of the environment, type : $ conda create env -n pystan python=3.8.5 pystan=2.19.1.1 arviz-0.10.0 jupyterlab=2.2.8
+ 1.1    - for a linux 64 machine run the following command in a terminal to exactly match the package installation used for the analysis : $ conda create --name pystan --file spec-file_pystan.txt or do a fresh install as for windows
+ 1.2    - If you're a windows/mac user, if a URL is broken or if you want a lighter version of the environment, type : $ conda create env -n pystan python=3.8.5 pystan=2.19.1.1 arviz-0.10.0 jupyterlab=2.2.8
  2. activate the environment through : $ conda activate pystan
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb in the main or the MixedModels folder except the files starting with HDDM*, see below.
