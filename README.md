@@ -26,11 +26,17 @@ In order to use the main notebooks you can install anaconda https://docs.anacond
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb in the main or the MixedModels folder except the files starting with HDDM*, see below.
 
-Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6. To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits you can do this by creating a new anaconda environment from the "spec-file_hddm.txt", either manually or automatically on linux 64 :
+Fitting drift diffusion models (DDM) required python 2.7.15 and HDDM 0.6.
+To ease reproducibility we extracted the traces and statistics of the MCMC chains from the DDM models to .csv contained in DDM/. If you want to reproduce the fits the following will install the exact same (old) packages but I don't know how long these packages will be maintained on the repositories of condaforge and pip. You can do this either by creating a new anaconda environment from the "spec-file_hddm.txt", either manually or automatically on linux 64 :
  1. Installing conda env (assuming anaconda is installed) :
      - $ conda create --name hddm --file spec-file_hddm.txt
-     - for windows/mac users or if you want a lighter version of the environment : $ conda create -n hddm python=2.7.15 hddm=0.6.0 jupyterlab=0.33.12
- 2. activate the environment through : $ conda activate hddm
+     - for windows/mac users or if you have problems with the spec file/want a lighter version of the environment : 
+           - $ conda create -n hddm python=2.7.15 pymc=2.3.7 jupyterlab
+           - $ conda activate hddm
+           - $ pip install kabuki==0.6.1
+           - $ pip install hddm==0.6.1
+         
+ 2. activate (or if already loaded deactivate first with : $ conda deactivate) the environment through : $ conda activate hddm
  3. launch Jupyter lab (recommended) : $ jupyter lab
  4. launch any .ipynb or .py in the DDM/ folder
 
